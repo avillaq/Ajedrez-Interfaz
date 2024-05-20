@@ -70,12 +70,11 @@ class Picture:
     """ Devuelve una nueva figura repitiendo la figura actual al costado
         la cantidad de veces que indique el valor de n """
     repeat = []
-    size = len(self.img)
-    for j in range(size):
+    for j in self.img:
       row = ""
       for i in range(n+1):
-        row+=f"{self.img[j]}"
-      repeat.append(f"{row}")
+        row+=j
+      repeat.append(row)
     return repeat
 
   def verticalRepeat(self, n):
