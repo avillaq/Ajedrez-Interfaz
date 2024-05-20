@@ -1,3 +1,3 @@
 from interpreter import draw
 from chessPictures import *
-draw(rock.horizontalMirror())
+draw(rock.negative())
