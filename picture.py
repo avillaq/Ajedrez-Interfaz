@@ -47,7 +47,13 @@ class Picture:
     return joined
 
   def up(self, p):
-    return Picture(None)
+    above = []
+    for i in p.img:
+      above.append(i)
+    for i in self.img:
+      above.append(i)
+    
+    return above
 
   def under(self, p):
     """ Devuelve una nueva figura poniendo la figura p sobre la
