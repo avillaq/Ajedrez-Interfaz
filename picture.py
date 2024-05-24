@@ -41,7 +41,7 @@ class Picture:
     """ Devuelve una nueva figura poniendo la figura del argumento 
         al lado derecho de la figura actual """
     joined = []
-    n = len(self.img)
+    n = len(p.img)
     for i in range(n):
       joined.append(self.img[i]+p.img[i])
     return Picture(joined)
