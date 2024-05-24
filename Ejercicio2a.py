@@ -1,3 +1,5 @@
 from interpreter import draw
 from chessPictures import *
-draw(rock.rotate())
+
+col1 = knight.under(knight.negative())
+col2 = knight.negative().under(knight)
