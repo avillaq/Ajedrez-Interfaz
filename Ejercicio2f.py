@@ -3,4 +3,7 @@ from chessPictures import *
 
 fila1 = square.join(square.negative()).horizontalRepeat(3)
 fila2 = fila1.negative()
-draw(fila2)
+
+union = fila1.under(fila2)
+
+draw(union.verticalRepeat(1))
