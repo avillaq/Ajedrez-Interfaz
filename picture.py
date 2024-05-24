@@ -58,13 +58,19 @@ class Picture:
   def under(self, p):
     """ Devuelve una nueva figura poniendo la figura p sobre la
         figura actual """
-    below = []
-    for i in self.img:
-      below.append(i)
+    over = []
 
-    for i in p.img:
-      below.append(i)
-    return Picture(below)
+    for i in range(len(self.img)):
+      row = ""
+      for j in range(len(self.img[i])):
+        if self.img[i][j] == p.img[i][j]:
+          row += self.img[i][j] 
+        elif p.img[i][j] == " ":
+          row += self.img[i][j]
+        else:
+          row += p.img[i][j]
+      over.append(row)
+    return Picture(over)
   
   def horizontalRepeat(self, n):
     """ Devuelve una nueva figura repitiendo la figura actual al costado
@@ -98,19 +104,3 @@ class Picture:
 
     return Picture(rotated)
   
-  def ponerEnCasillero(self, n):
-    white_black = {
-      0: "_",
-      1: "="
-    }
-    finalPiece = []
-    for i in self.img:
-      row = ""
-      for j in i:
-        if j == " ":
-          row+=white_black[n]
-        else:
-          row+=j
-      finalPiece.append(row)
-
-    return Picture(finalPiece)
