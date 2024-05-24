@@ -11,7 +11,15 @@ torreDerecho = rock.negative().ponerEnCasillero(1)
 caballoIzquierdo = knight.negative().ponerEnCasillero(1)
 caballoDerecho = knight.negative().ponerEnCasillero(0)
 
+# Alfil
+alfilIzquierdo = bishop.negative().ponerEnCasillero(0)
+alfilDerecho = bishop.negative().ponerEnCasillero(1)
+
+# Reina y Rey 
+reina = queen.negative().ponerEnCasillero(1)
+rey = king.negative().ponerEnCasillero(0)
 
 
-draw(caballoIzquierdo)
+
+draw(rey)
 
