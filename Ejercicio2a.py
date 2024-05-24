@@ -1,3 +1,3 @@
 from interpreter import draw
 from chessPictures import *
-draw(rock.horizontalRepeat(2))
+draw(rock.verticalRepeat(2))
