@@ -59,7 +59,6 @@ class Picture:
     """ Devuelve una nueva figura poniendo la figura p sobre la
         figura actual """
     over = []
-
     for i in range(len(self.img)):
       row = ""
       for j in range(len(self.img[i])):
