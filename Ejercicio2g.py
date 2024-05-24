@@ -42,5 +42,9 @@ filaVacia1 = square.join(square.negative()).horizontalRepeat(3)
 filaVacia2 = square.negative().join(square).horizontalRepeat(3)
 
 union_filas_vacias = filaVacia2.up(filaVacia1).verticalRepeat(1)
-draw(union_filas_vacias)
+
+##### UNION DE TODAS LAS PIEZAS #####
+tablero = fila_principal_blancas.up(fila_peones_blancas).up(union_filas_vacias).up(fila_peones_negras).up(fila_principal_negras)
+
+draw(tablero)
 
