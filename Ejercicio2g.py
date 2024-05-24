@@ -6,5 +6,5 @@ fila2 = fila1.negative()
 
 union = fila1.under(fila2)
 
-draw(union.join(queen))
+draw(union.ponerEnCasillero(1))
 

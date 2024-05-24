@@ -98,13 +98,17 @@ class Picture:
 
     return Picture(rotated)
   
-  def ponerEnCasillero(self):
+  def ponerEnCasillero(self, n):
+    white_black = {
+      0: "_",
+      1: "="
+    }
     finalPiece = []
     for i in self.img:
       row = ""
       for j in i:
         if j == " ":
-          row+="_"
+          row+=white_black[n]
         else:
           row+=j
       finalPiece.append(row)
