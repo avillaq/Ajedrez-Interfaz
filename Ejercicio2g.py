@@ -19,7 +19,7 @@ alfilDerecho = bishop.negative().ponerEnCasillero(1)
 reina = queen.negative().ponerEnCasillero(1)
 rey = king.negative().ponerEnCasillero(0)
 
+row = torreIzquierdo.join(caballoIzquierdo).join(alfilIzquierdo).join(reina).join(rey).join(alfilDerecho).join(caballoDerecho).join(torreDerecho)
 
-
-draw(rey)
+draw(row)
 
