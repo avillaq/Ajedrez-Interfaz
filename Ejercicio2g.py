@@ -4,29 +4,29 @@ from chessPictures import *
 ##### Piezas Negras #####
 
 # Torres
-torreIzquierdo = rock.negative().ponerEnCasillero(0)
-torreDerecho = rock.negative().ponerEnCasillero(1)
+torreIzquierdo = square.under(rock.negative())
+torreDerecho = square.negative().under(rock.negative())
 
 # Caballos
-caballoIzquierdo = knight.negative().ponerEnCasillero(1)
-caballoDerecho = knight.negative().ponerEnCasillero(0)
+caballoIzquierdo = square.negative().under(knight.negative())
+caballoDerecho = square.under(knight.negative())
 
 # Alfiles
-alfilIzquierdo = bishop.negative().ponerEnCasillero(0)
-alfilDerecho = bishop.negative().ponerEnCasillero(1)
+alfilIzquierdo = square.under(bishop.negative())
+alfilDerecho = square.negative().under(bishop.negative())
 
 # Reina y Rey 
-reina = queen.negative().ponerEnCasillero(1)
-rey = king.negative().ponerEnCasillero(0)
+reina = square.negative().under(queen.negative())
+rey = square.under(king.negative())
 
 # Peones
-peonIzquierdo = pawn.negative().ponerEnCasillero(1)
-peonDerecho = pawn.negative().ponerEnCasillero(0)
+peonIzquierdo = square.negative().under(pawn.negative())
+peonDerecho = square.under(pawn.negative())
 
 # Fila Principal de la piezas negras
 fila_principal_negras = torreIzquierdo.join(caballoIzquierdo).join(alfilIzquierdo).join(reina).join(rey).join(alfilDerecho).join(caballoDerecho).join(torreDerecho)
 
 # Fila de peones de las piezas negras
-fila_peones_negras = peonIzquierdo.join(peonDerecho)
-draw(fila_peones_negras.horizontalRepeat(3))
+fila_peones_negras = peonIzquierdo.join(peonDerecho).horizontalRepeat(3)
+draw(fila_peones_negras)
 
