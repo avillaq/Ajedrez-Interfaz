@@ -97,4 +97,16 @@ class Picture:
         n-=1
 
     return Picture(rotated)
+  
+  def ponerEnCasillero(self):
+    finalPiece = []
+    for i in self.img:
+      row = ""
+      for j in i:
+        if j == " ":
+          row+="_"
+        else:
+          row+=j
+      finalPiece.append(row)
 
+    return Picture(finalPiece)
