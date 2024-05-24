@@ -37,5 +37,10 @@ fila_principal_blancas = fila_principal_negras.negative()
 # Fila de peones de las piezas blancas
 fila_peones_blancas = fila_peones_negras.negative()
 
-draw(fila_principal_blancas.up(fila_peones_blancas))
+##### Piezas vacias en el centro del tablero #####
+filaVacia1 = square.join(square.negative()).horizontalRepeat(3)
+filaVacia2 = square.negative().join(square).horizontalRepeat(3)
+
+union_filas_vacias = filaVacia2.up(filaVacia1).verticalRepeat(1)
+draw(union_filas_vacias)
 
