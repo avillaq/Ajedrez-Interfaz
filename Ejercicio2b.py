@@ -1,7 +1,7 @@
 from interpreter import draw
 from chessPictures import *
 
-col1 = knight.under(knight.negative().verticalMirror())
-col2 = knight.negative().under(knight.verticalMirror())
+col1 = knight.negative().verticalMirror().up(knight)
+col2 = knight.verticalMirror().up(knight.negative())
 
 draw(col1.join(col2))
