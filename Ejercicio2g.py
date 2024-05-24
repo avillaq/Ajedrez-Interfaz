@@ -28,5 +28,14 @@ fila_principal_negras = torreIzquierdo.join(caballoIzquierdo).join(alfilIzquierd
 
 # Fila de peones de las piezas negras
 fila_peones_negras = peonIzquierdo.join(peonDerecho).horizontalRepeat(3)
-draw(fila_peones_negras)
+
+##### Piezas Blancas #####
+
+# Fila Principal de la piezas blancas
+fila_principal_blancas = fila_principal_negras.negative()
+
+# Fila de peones de las piezas blancas
+fila_peones_blancas = fila_peones_negras.negative()
+
+draw(fila_principal_blancas.up(fila_peones_blancas))
 
